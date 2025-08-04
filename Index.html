@@ -3,58 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neon Tech Tools</title>
+  <title>Tech Tools & Blog</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <div class="logo">NeonTools</div>
     <nav>
-      <button onclick="showPage(0)">Grammar Checker</button>
-      <button onclick="showPage(1)">SEO Score</button>
-      <button onclick="showPage(2)">Blog</button>
+      <h1>BlueGlow Tools</h1>
+      <ul>
+        <li><a href="#grammar">Grammar Checker</a></li>
+        <li><a href="#seo">SEO Score</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="slider-container">
-    <!-- PAGE 1: Grammar Checker -->
-    <section class="slide active" id="page1">
-      <h1>Grammar Checker</h1>
-      <textarea placeholder="Paste your text here..."></textarea>
-      <div class="cta-buttons">
-        <button class="btn-primary">Check Grammar</button>
-        <button class="btn-secondary">Clear Text</button>
-      </div>
-    </section>
+  <!-- Grammar Checker -->
+  <section id="grammar" class="section grammar-checker">
+    <h2>Grammar Checker</h2>
+    <textarea id="grammarInput" placeholder="Paste your text here..."></textarea>
+    <button onclick="checkGrammar()">Check Grammar</button>
+    <div id="grammarResult" class="result-box">Your grammar suggestions will appear here.</div>
+  </section>
 
-    <!-- PAGE 2: SEO Score Checker -->
-    <section class="slide" id="page2">
-      <h1>Website SEO Score</h1>
-      <p>Analyse your website's performance with powerful tools:</p>
-      <ul class="seo-tools">
-        <li>✔ Meta Tag Scanner</li>
-        <li>✔ Mobile-Friendliness Test</li>
-        <li>✔ Speed & Performance Audit</li>
-        <li>✔ Backlink Profile Checker</li>
-        <li>✔ Keyword Density Report</li>
+  <!-- SEO Score Checker -->
+  <section id="seo" class="section seo-score">
+    <h2>Website SEO Score Checker</h2>
+    <input type="url" id="seoInput" placeholder="Enter website URL..."/>
+    <button onclick="checkSEO()">Check SEO Score</button>
+    <div id="seoResult" class="result-box">SEO results will be shown here.</div>
+    <div class="tools-list">
+      <h3>Tools We Use</h3>
+      <ul>
+        <li>Meta Tag Analysis</li>
+        <li>Mobile Friendliness</li>
+        <li>Page Speed Score</li>
+        <li>Alt Text Coverage</li>
       </ul>
-      <button class="btn-primary">Run Full SEO Check</button>
-    </section>
+    </div>
+  </section>
 
-    <!-- PAGE 3: Blog Section -->
-    <section class="slide" id="page3">
-      <h1>Our Latest Blog</h1>
+  <!-- Blog Section -->
+  <section id="blog" class="section blog-section">
+    <h2>Explore Our Blog</h2>
+    <div class="blogs">
       <div class="blog-card">
-        <img src="https://via.placeholder.com/600x300" alt="Blog Image" />
-        <h2>Top 5 AI Tools to Boost Productivity in 2025</h2>
-        <p>Explore how AI is changing content creation, coding, design, and research with these tools every creator should know.</p>
-        <button class="btn-secondary">Read More</button>
+        <img src="https://via.placeholder.com/300x150.png?text=AI+in+2025" alt="Blog 1" />
+        <h3>AI Trends You Can't Miss in 2025</h3>
+        <p>Discover how AI is revolutionising daily life, industry, and decision-making.</p>
+        <button>Read More</button>
       </div>
-    </section>
-  </main>
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/300x150.png?text=Web+3.0" alt="Blog 2" />
+        <h3>Web 3.0: What It Means for Developers</h3>
+        <p>Dive into the decentralised web and understand its real-world implications.</p>
+        <button>Read More</button>
+      </div>
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/300x150.png?text=UX+Tips" alt="Blog 3" />
+        <h3>5 UI/UX Hacks to Boost Engagement</h3>
+        <p>Simple design strategies to level up user experience across devices.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 NeonTools. Built for the world, designed with ❤️ in India.</p>
+    <p>© 2025 BlueGlow Tools | Built with ❤️ by a 20 y/o Dev</p>
   </footer>
 
   <script src="javascript.js"></script>
