@@ -1,129 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+:root {
+  --primary-blue: #0f62fe;
+  --blue-gradient: linear-gradient(135deg, #0575e6, #00c6ff);
+  --dark-bg: #0b0c10;
+  --text-glow: #00cfff;
+}
 
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: #0a0a0a;
-  color: #fff;
+  background: var(--dark-bg);
+  color: white;
+  overflow-x: hidden;
 }
 
 header {
-  background: #0f0f0f;
+  background: var(--blue-gradient);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #00ffe0;
 }
 
-header h1 {
-  margin: 0;
-  color: #00ffe0;
-  text-shadow: 0 0 10px #00ffe0;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
-nav a {
-  margin-left: 1.5rem;
-  color: #00ffe0;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #0ff;
-}
-
-main {
-  padding: 3rem 1.5rem;
-}
-
-.neon-section {
-  margin-bottom: 5rem;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
-  box-shadow: 0 0 25px #00ffe0;
-}
-
-.neon-section h2 {
-  font-size: 2.5rem;
-  color: #00ffe0;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 8px #00ffe0;
-}
-
-.neon-section p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #ccc;
-}
-
-textarea,
-input[type="text"] {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background: #1a1a1a;
-  border: 2px solid #00ffe0;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 8px;
-}
-
-button {
-  padding: 0.75rem 1.5rem;
-  background: #00ffe0;
-  color: #000;
-  font-size: 1rem;
-  border: none;
+nav button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 0 15px #00ffe0;
   transition: 0.3s;
 }
 
-button:hover {
-  background: #0ff;
-  transform: scale(1.05);
+nav button:hover {
+  background: white;
+  color: #0575e6;
 }
 
-.output {
-  margin-top: 1rem;
+.slider-container {
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+textarea {
+  width: 80%;
+  height: 200px;
+  font-size: 1.1rem;
   padding: 1rem;
-  background: #111;
-  border: 1px solid #00ffe0;
-  border-radius: 8px;
-  color: #fff;
+  border: none;
+  border-radius: 12px;
+  background: #101720;
+  color: white;
+  box-shadow: 0 0 20px #00cfff50;
+  margin: 2rem 0;
+  resize: none;
 }
 
-.blog-list {
-  display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00cfff70;
+}
+
+.btn-primary {
+  background: #00c6ff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #0099cc;
+  box-shadow: 0 0 20px #00cfff;
+}
+
+.btn-secondary {
+  background: #ffffff20;
+  color: white;
+  border: 2px solid #00cfff;
+}
+
+.btn-secondary:hover {
+  background: #00cfff;
+  color: black;
+}
+
+.seo-tools {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.seo-tools li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ffffff22;
 }
 
 .blog-card {
-  background: #151515;
-  border: 1px solid #00ffe0;
-  padding: 1.5rem;
+  background: #101720;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 15px #00ffe0;
-  transition: 0.3s;
+  box-shadow: 0 0 20px #00cfff40;
+  text-align: left;
 }
 
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
-.blog-card h3 {
-  margin: 0 0 0.5rem;
-  color: #00ffe0;
+.blog-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 footer {
-  background: #0f0f0f;
+  background: #0d1117;
+  padding: 1rem;
   text-align: center;
-  padding: 1.5rem;
-  border-top: 2px solid #00ffe0;
+  font-size: 0.9rem;
   color: #aaa;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
