@@ -3,75 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tech Tools & Blog</title>
+  <title>Home | BlueGlow Tools</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
-      <h1>BlueGlow Tools</h1>
+      <h1>BlueGlow</h1>
       <ul>
-        <li><a href="#grammar">Grammar Checker</a></li>
-        <li><a href="#seo">SEO Score</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grammar.html">Grammar Checker</a></li>
+        <li><a href="seo.html">SEO Checker</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="cv.html">CV Designer</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Grammar Checker -->
-  <section id="grammar" class="section grammar-checker">
-    <h2>Grammar Checker</h2>
-    <textarea id="grammarInput" placeholder="Paste your text here..."></textarea>
-    <button onclick="checkGrammar()">Check Grammar</button>
-    <div id="grammarResult" class="result-box">Your grammar suggestions will appear here.</div>
-  </section>
-
-  <!-- SEO Score Checker -->
-  <section id="seo" class="section seo-score">
-    <h2>Website SEO Score Checker</h2>
-    <input type="url" id="seoInput" placeholder="Enter website URL..."/>
-    <button onclick="checkSEO()">Check SEO Score</button>
-    <div id="seoResult" class="result-box">SEO results will be shown here.</div>
-    <div class="tools-list">
-      <h3>Tools We Use</h3>
-      <ul>
-        <li>Meta Tag Analysis</li>
-        <li>Mobile Friendliness</li>
-        <li>Page Speed Score</li>
-        <li>Alt Text Coverage</li>
-      </ul>
+  <section class="slider">
+    <div class="slides">
+      <img src="assets/slide1.jpg" alt="Slide 1">
+      <img src="assets/slide2.jpg" alt="Slide 2">
+      <img src="assets/slide3.jpg" alt="Slide 3">
     </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="blog" class="section blog-section">
-    <h2>Explore Our Blog</h2>
-    <div class="blogs">
-      <div class="blog-card">
-        <img src="https://via.placeholder.com/300x150.png?text=AI+in+2025" alt="Blog 1" />
-        <h3>AI Trends You Can't Miss in 2025</h3>
-        <p>Discover how AI is revolutionising daily life, industry, and decision-making.</p>
-        <button>Read More</button>
-      </div>
-      <div class="blog-card">
-        <img src="https://via.placeholder.com/300x150.png?text=Web+3.0" alt="Blog 2" />
-        <h3>Web 3.0: What It Means for Developers</h3>
-        <p>Dive into the decentralised web and understand its real-world implications.</p>
-        <button>Read More</button>
-      </div>
-      <div class="blog-card">
-        <img src="https://via.placeholder.com/300x150.png?text=UX+Tips" alt="Blog 3" />
-        <h3>5 UI/UX Hacks to Boost Engagement</h3>
-        <p>Simple design strategies to level up user experience across devices.</p>
-        <button>Read More</button>
-      </div>
+    <div class="controls">
+      <button onclick="prevSlide()">⟵</button>
+      <button onclick="nextSlide()">⟶</button>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 BlueGlow Tools | Built with ❤️ by a 20 y/o Dev</p>
+    <p>© 2025 BlueGlow Tools | Crafted with care</p>
   </footer>
 
-  <script src="javascript.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
