@@ -3,70 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neon Tech Tools</title>
+  <title>My Tech Blog</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="slider-container">
-    
-    <!-- Header -->
-    <header class="site-header">
-      <h2>Neon Tools</h2>
-      <nav>
-        <a href="#slide1">Home</a>
-        <a href="#slide2">Design</a>
-        <a href="#slide3">Blog</a>
-      </nav>
-    </header>
+  <header>
+    <h1>Neon Tech Tools</h1>
+    <nav>
+      <a href="#grammar">Grammar Checker</a>
+      <a href="#seo">SEO Score Check</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
 
-    <!-- Slide 1: Homepage -->
-    <div class="slide active" id="slide1">
-      <div class="slide-content homepage">
-        <section class="tool-box">
-          <h1>Grammar Checker</h1>
-          <p>Instantly improve your writing. Fix grammar errors in a click.</p>
-          <button>Check Grammar</button>
-        </section>
-        <section class="tool-box">
-          <h1>Website SEO Score</h1>
-          <p>Analyse your website SEO health in seconds.</p>
-          <button>Run SEO Audit</button>
-        </section>
-        <section class="tool-box">
-          <h1>Blog Section</h1>
-          <p>Read our latest blogs on trending tech topics.</p>
-          <button>Explore Blogs</button>
-        </section>
+  <main>
+    <section id="grammar" class="neon-section">
+      <h2>Grammar Checker</h2>
+      <p>Paste your content below to check grammar accuracy and sentence clarity.</p>
+      <textarea placeholder="Enter your text here..."></textarea>
+      <button onclick="checkGrammar()">Check Grammar</button>
+      <div class="output" id="grammarOutput">Output will show here.</div>
+    </section>
+
+    <section id="seo" class="neon-section">
+      <h2>Website SEO Score Check</h2>
+      <p>Enter a website URL to check its SEO score and on-page metrics.</p>
+      <input type="text" id="seoInput" placeholder="https://yourwebsite.com" />
+      <button onclick="checkSEO()">Check SEO</button>
+      <div class="output" id="seoOutput">SEO results will appear here.</div>
+    </section>
+
+    <section id="blog" class="neon-section">
+      <h2>Latest Blog Posts</h2>
+      <p>Explore articles on trending tech, web dev tips, and digital tools.</p>
+      <div class="blog-list">
+        <div class="blog-card">
+          <h3>⚡ AI Writing Tools Reviewed</h3>
+          <p>A quick comparison of the best AI writing assistants in 2025.</p>
+        </div>
+        <div class="blog-card">
+          <h3>🧠 SEO in 10 Minutes</h3>
+          <p>Master SEO basics and boost your Google rankings fast.</p>
+        </div>
+        <div class="blog-card">
+          <h3>💻 Hosting with Netlify</h3>
+          <p>Step-by-step guide to build and host your site on Netlify.</p>
+        </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <!-- Slide 2: Design Philosophy -->
-    <div class="slide" id="slide2">
-      <div class="slide-content">
-        <h1>Design that Pops</h1>
-        <p>UI/UX that glows—literally. Bold ideas, clean execution.</p>
-      </div>
-    </div>
-
-    <!-- Slide 3: Blog Overview -->
-    <div class="slide" id="slide3">
-      <div class="slide-content">
-        <h1>Blog Like a Pro</h1>
-        <p>Publish content with power. Markdown, GitHub & Netlify ready.</p>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© 2025 Neon Tools. Made with ⚡ by a 20 y/o dev.</p>
-    </footer>
-
-    <!-- Nav Buttons -->
-    <div class="nav">
-      <button onclick="prevSlide()">⟵</button>
-      <button onclick="nextSlide()">⟶</button>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 My Tech Blog. Built with 💻 on Netlify & GitHub</p>
+  </footer>
 
   <script src="javascript.js"></script>
 </body>
