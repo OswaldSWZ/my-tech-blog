@@ -39,32 +39,40 @@ async function checkSEO() {
   const resultBox = document.getElementById("seoResult");
 
   if (!siteUrl) {
-    resultBox.innerText = "Please enter a valid URL.";
+    resultBox.innerText = "Please enter a valid website URL.";
     return;
   }
 
-  resultBox.innerText = "Analysing SEO...";
+  resultBox.innerText = "🔍 Analysing... Please wait.";
 
-  const apiKey = "YOUR_GOOGLE_API_KEY"; // Replace this
+  const apiKey = AIzaSyB-VMvqYYKwPcVASXtfTsF51zkTuf9bifc
 
   try {
-    const res = await fetch(
-      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(siteUrl)}&key=${apiKey}`
+    const response = await fetch(
+      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(siteUrl)}&strategy=mobile&key=${apiKey}`
     );
-    const data = await res.json();
+    const data = await response.json();
 
-    const score = data.lighthouseResult.categories.performance.score * 100;
-    const mobile = data.lighthouseResult.categories.accessibility.score * 100;
+    if (!data.lighthouseResult) {
+      resultBox.innerText = "❌ Invalid response or website unreachable.";
+      return;
+    }
+
+    const performance = data.lighthouseResult.categories.performance.score * 100;
+    const accessibility = data.lighthouseResult.categories.accessibility.score * 100;
+    const bestPractices = data.lighthouseResult.categories["best-practices"].score * 100;
     const seo = data.lighthouseResult.categories.seo.score * 100;
 
     resultBox.innerHTML = `
-      ✅ <strong>PageSpeed Score:</strong> ${score}/100<br>
-      📱 <strong>Mobile Accessibility:</strong> ${mobile}/100<br>
-      📈 <strong>SEO Best Practices:</strong> ${seo}/100<br>
+      ✅ <strong>Performance:</strong> ${performance}/100<br>
+      📱 <strong>Accessibility:</strong> ${accessibility}/100<br>
+      🧠 <strong>Best Practices:</strong> ${bestPractices}/100<br>
+      📈 <strong>SEO:</strong> ${seo}/100
     `;
-  } catch (err) {
-    console.error(err);
-    resultBox.innerText = "❌ Could not fetch SEO data. Check URL or try later.";
+  } catch (error) {
+    console.error(error);
+    resultBox.innerText = "❌ Error fetching SEO data. Check your URL or try again later.";
   }
 }
+
 
