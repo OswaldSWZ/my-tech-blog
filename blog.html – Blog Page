@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | BlueGlow Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>BlueGlow</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grammar.html">Grammar Checker</a></li>
+        <li><a href="seo.html">SEO Checker</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="cv.html">CV Designer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h2>Our Latest Blogs</h2>
+    <p>Fresh insights on tech, tools and everything digital.</p>
+
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/300x160.png?text=AI+in+2025" alt="Blog 1">
+        <h3>AI Trends You Can’t Ignore in 2025</h3>
+        <p>Explore the evolution of AI across industries and its implications for users and businesses alike.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/300x160.png?text=Web+3.0" alt="Blog 2">
+        <h3>What Web 3.0 Means for the Internet</h3>
+        <p>Understand decentralisation, blockchain, and how Web 3.0 is reshaping the digital world.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/300x160.png?text=UX+Tips" alt="Blog 3">
+        <h3>5 UX Hacks to Keep Visitors Engaged</h3>
+        <p>Small tweaks, big impact—simple UX changes that improve retention and conversions.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 BlueGlow Tools | Blogs that Matter</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
