@@ -1,35 +1,23 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+function checkGrammar() {
+  const text = document.querySelector('textarea').value;
+  const output = document.getElementById('grammarOutput');
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-    }
-  });
+  if (!text.trim()) {
+    output.innerText = "Please enter text to check.";
+    return;
+  }
+
+  output.innerText = "✅ Grammar looks great! (Note: Real API integration pending.)";
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+function checkSEO() {
+  const url = document.getElementById('seoInput').value;
+  const output = document.getElementById('seoOutput');
+
+  if (!url.trim()) {
+    output.innerText = "Please enter a website URL.";
+    return;
+  }
+
+  output.innerText = `🔍 SEO score for ${url} is 85/100 (Simulated result).`;
 }
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Optional: Auto slide every 7 seconds
-setInterval(nextSlide, 7000);
-
-// Anchor nav click scroll (optional)
-document.querySelectorAll("header nav a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const targetId = e.target.getAttribute("href").replace('#', '');
-    const targetIndex = Array.from(slides).findIndex(s => s.id === targetId);
-    currentSlide = targetIndex;
-    showSlide(currentSlide);
-  });
-});
