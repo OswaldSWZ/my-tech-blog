@@ -1,29 +1,62 @@
+// ===== Grammar Checker =====
 function checkGrammar() {
-  const input = document.getElementById('grammarInput').value;
+  const input = document.getElementById('grammarInput').value.trim();
   const output = document.getElementById('grammarResult');
 
-  if (!input.trim()) {
-    output.innerText = "Please paste some text to check.";
+  if (!input) {
+    output.textContent = "Please paste some text to check.";
     return;
   }
 
-  // Simulated response (you can integrate with an API later)
-  output.innerText = `No major grammar issues found. Looks good! ✔️`;
+  // Simulated response
+  output.textContent = "✅ No major grammar issues found. Your writing looks clear!";
 }
 
+// ===== SEO Checker =====
 function checkSEO() {
-  const input = document.getElementById('seoInput').value;
-  const output = document.getElementById('seoResult');
+  const url = document.getElementById('seoInput').value.trim();
+  const resultBox = document.getElementById('seoResult');
 
-  if (!input.trim()) {
-    output.innerText = "Please enter a valid URL.";
+  if (!url || !url.startsWith("http")) {
+    resultBox.textContent = "Please enter a valid website URL (starting with http or https).";
     return;
   }
 
-  // Simulated result (you can connect this to an API later)
-  output.innerText = `SEO Score: 83/100 ✅  
-Mobile Friendly: Yes  
-Meta Tags: Complete  
-Alt Text: 90% coverage  
-Page Speed: B grade`;
+  // Simulated SEO analysis
+  resultBox.innerHTML = `
+    <strong>SEO Score:</strong> 85/100 <br/>
+    <strong>Mobile Friendly:</strong> ✅<br/>
+    <strong>Page Speed:</strong> B+<br/>
+    <strong>Meta Tags:</strong> Complete<br/>
+    <strong>Alt Attributes:</strong> 90% Optimised
+  `;
+}
+
+// ===== Image Slider (Home Page) =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slides img');
+
+function showSlide(index) {
+  slides.forEach((img, i) => {
+    img.classList.remove('active');
+    if (i === index) {
+      img.classList.add('active');
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto start the slider if on Home page
+if (slides.length > 0) {
+  showSlide(currentSlide);
+  setInterval(nextSlide, 5000); // Auto-slide every 5s
 }
