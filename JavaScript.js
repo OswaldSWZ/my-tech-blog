@@ -20,5 +20,16 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Optional: Auto-slide every 7 seconds
+// Optional: Auto slide every 7 seconds
 setInterval(nextSlide, 7000);
+
+// Anchor nav click scroll (optional)
+document.querySelectorAll("header nav a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute("href").replace('#', '');
+    const targetIndex = Array.from(slides).findIndex(s => s.id === targetId);
+    currentSlide = targetIndex;
+    showSlide(currentSlide);
+  });
+});
