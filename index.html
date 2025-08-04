@@ -3,40 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | BlueGlow Tools</title>
+  <title>GreenTools | Blog & Web Utilities</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <nav>
-      <h1>BlueGlow</h1>
+      <div class="logo">GreenTools</div>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="grammar.html">Grammar Checker</a></li>
-        <li><a href="seo.html">SEO Checker</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="cv.html">CV Designer</a></li>
+        <li><a href="#grammar">Grammar</a></li>
+        <li><a href="#seo">SEO Score</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#cv">CV Designer</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="slider">
-    <div class="slides">
-      <img src="assets/slide1.jpg" alt="Slide 1">
-      <img src="assets/slide2.jpg" alt="Slide 2">
-      <img src="assets/slide3.jpg" alt="Slide 3">
-    </div>
-    <div class="controls">
-      <button onclick="prevSlide()">⟵</button>
-      <button onclick="nextSlide()">⟶</button>
+    <div class="slide-images">
+      <img src="https://via.placeholder.com/1200x400?text=Welcome+to+GreenTools" alt="Slide 1">
+      <img src="https://via.placeholder.com/1200x400?text=Check+SEO+Scores+Easily" alt="Slide 2">
+      <img src="https://via.placeholder.com/1200x400?text=Build+Professional+CVs" alt="Slide 3">
     </div>
   </section>
 
+  <main>
+
+    <!-- Grammar Checker -->
+    <section id="grammar" class="tool-section">
+      <h2>Grammar Checker</h2>
+      <textarea id="grammarInput" placeholder="Paste your text here..."></textarea>
+      <button onclick="checkGrammar()">Check Grammar</button>
+      <div id="grammarResult" class="result-box"></div>
+    </section>
+
+    <!-- SEO Score Checker -->
+    <section id="seo" class="tool-section">
+      <h2>SEO Score Checker</h2>
+      <input type="url" id="seoInput" placeholder="Enter your website URL">
+      <button onclick="checkSEO()">Analyse SEO</button>
+      <div id="seoResult" class="result-box"></div>
+      <div class="seo-tools">
+        <h3>We check for:</h3>
+        <ul>
+          <li>Meta Tags</li>
+          <li>Mobile Friendliness</li>
+          <li>Page Speed</li>
+          <li>Alt Text</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="tool-section blog-section">
+      <h2>Our Blog</h2>
+      <div class="blog-list">
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300x150.png?text=Blog+1">
+          <h3>Top 5 Tech Trends in 2025</h3>
+          <p>Stay ahead of the curve with these innovations.</p>
+          <button>Read More</button>
+        </div>
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300x150.png?text=Blog+2">
+          <h3>SEO for Beginners</h3>
+          <p>Learn how to optimise your website in simple steps.</p>
+          <button>Read More</button>
+        </div>
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300x150.png?text=Blog+3">
+          <h3>Writing Error-Free Content</h3>
+          <p>How grammar checkers can boost your writing game.</p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Designer -->
+    <section id="cv" class="tool-section">
+      <h2>CV Designer</h2>
+      <p>Choose a template below to start building your professional resume:</p>
+      <div class="cv-templates">
+        <div class="cv-template">
+          <img src="https://via.placeholder.com/300x400?text=Modern+Template">
+          <button>Use Template</button>
+        </div>
+        <div class="cv-template">
+          <img src="https://via.placeholder.com/300x400?text=Corporate+Style">
+          <button>Use Template</button>
+        </div>
+        <div class="cv-template">
+          <img src="https://via.placeholder.com/300x400?text=Creative+Layout">
+          <button>Use Template</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <footer>
-    <p>© 2025 BlueGlow Tools | Crafted with care</p>
+    <p>© 2025 GreenTools | Built with love by a 20 y/o dev</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javascript.js"></script>
 </body>
 </html>
