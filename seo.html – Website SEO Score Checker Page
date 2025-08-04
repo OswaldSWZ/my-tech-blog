@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEO Checker | BlueGlow Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>BlueGlow</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grammar.html">Grammar Checker</a></li>
+        <li><a href="seo.html" class="active">SEO Checker</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="cv.html">CV Designer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h2>Website SEO Score Checker</h2>
+    <p>Analyse your website and discover how to improve its search visibility.</p>
+    <input type="url" id="seoInput" placeholder="Enter your website URL" />
+    <button onclick="checkSEO()">Check SEO Score</button>
+    
+    <div id="seoResult" class="result-box">
+      Your SEO analysis will appear here.
+    </div>
+
+    <section class="tools-list">
+      <h3>Tools We Use:</h3>
+      <ul>
+        <li>Meta Tag Analysis</li>
+        <li>Mobile Friendliness</li>
+        <li>Page Speed Score</li>
+        <li>Alt Text and Image Optimisation</li>
+        <li>Keyword Density & Readability</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 BlueGlow Tools | SEO Simplified</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
