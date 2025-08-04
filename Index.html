@@ -3,58 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Tech Blog</title>
+  <title>Neon Tech Tools</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Neon Tech Tools</h1>
+    <div class="logo">NeonTools</div>
     <nav>
-      <a href="#grammar">Grammar Checker</a>
-      <a href="#seo">SEO Score Check</a>
-      <a href="#blog">Blog</a>
+      <button onclick="showPage(0)">Grammar Checker</button>
+      <button onclick="showPage(1)">SEO Score</button>
+      <button onclick="showPage(2)">Blog</button>
     </nav>
   </header>
 
-  <main>
-    <section id="grammar" class="neon-section">
-      <h2>Grammar Checker</h2>
-      <p>Paste your content below to check grammar accuracy and sentence clarity.</p>
-      <textarea placeholder="Enter your text here..."></textarea>
-      <button onclick="checkGrammar()">Check Grammar</button>
-      <div class="output" id="grammarOutput">Output will show here.</div>
+  <main class="slider-container">
+    <!-- PAGE 1: Grammar Checker -->
+    <section class="slide active" id="page1">
+      <h1>Grammar Checker</h1>
+      <textarea placeholder="Paste your text here..."></textarea>
+      <div class="cta-buttons">
+        <button class="btn-primary">Check Grammar</button>
+        <button class="btn-secondary">Clear Text</button>
+      </div>
     </section>
 
-    <section id="seo" class="neon-section">
-      <h2>Website SEO Score Check</h2>
-      <p>Enter a website URL to check its SEO score and on-page metrics.</p>
-      <input type="text" id="seoInput" placeholder="https://yourwebsite.com" />
-      <button onclick="checkSEO()">Check SEO</button>
-      <div class="output" id="seoOutput">SEO results will appear here.</div>
+    <!-- PAGE 2: SEO Score Checker -->
+    <section class="slide" id="page2">
+      <h1>Website SEO Score</h1>
+      <p>Analyse your website's performance with powerful tools:</p>
+      <ul class="seo-tools">
+        <li>✔ Meta Tag Scanner</li>
+        <li>✔ Mobile-Friendliness Test</li>
+        <li>✔ Speed & Performance Audit</li>
+        <li>✔ Backlink Profile Checker</li>
+        <li>✔ Keyword Density Report</li>
+      </ul>
+      <button class="btn-primary">Run Full SEO Check</button>
     </section>
 
-    <section id="blog" class="neon-section">
-      <h2>Latest Blog Posts</h2>
-      <p>Explore articles on trending tech, web dev tips, and digital tools.</p>
-      <div class="blog-list">
-        <div class="blog-card">
-          <h3>⚡ AI Writing Tools Reviewed</h3>
-          <p>A quick comparison of the best AI writing assistants in 2025.</p>
-        </div>
-        <div class="blog-card">
-          <h3>🧠 SEO in 10 Minutes</h3>
-          <p>Master SEO basics and boost your Google rankings fast.</p>
-        </div>
-        <div class="blog-card">
-          <h3>💻 Hosting with Netlify</h3>
-          <p>Step-by-step guide to build and host your site on Netlify.</p>
-        </div>
+    <!-- PAGE 3: Blog Section -->
+    <section class="slide" id="page3">
+      <h1>Our Latest Blog</h1>
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/600x300" alt="Blog Image" />
+        <h2>Top 5 AI Tools to Boost Productivity in 2025</h2>
+        <p>Explore how AI is changing content creation, coding, design, and research with these tools every creator should know.</p>
+        <button class="btn-secondary">Read More</button>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 My Tech Blog. Built with 💻 on Netlify & GitHub</p>
+    <p>© 2025 NeonTools. Built for the world, designed with ❤️ in India.</p>
   </footer>
 
   <script src="javascript.js"></script>
